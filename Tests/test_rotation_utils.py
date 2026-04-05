@@ -22,3 +22,18 @@ def test_positive_input_460() -> None:
 
 def test_positive_input_820() -> None:
     assert adjust_rotation(820) == 100
+
+#Test negative inputs
+def test_negative_input_100():
+    assert adjust_rotation(-100) == 260
+
+def test_negative_input_460():
+    assert adjust_rotation(-460) == 260
+
+def test_negative_input_820():
+    assert adjust_rotation(-820) == 260
+
+#Test non-numeric input 
+def test_non_numeric_input():
+    with pytest.raises(TypeError):
+        adjust_rotation("abc")
